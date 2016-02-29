@@ -27,10 +27,10 @@ public class Runner {
             //statement.execute("DROP table friendships");
            // statement.execute("DROP table users ");
 
-          //  statement.execute("CREATE TABLE users (id INT(11) not NULL, name VARCHAR(30) not NULL, surname VARCHAR(30) not NULL, birthdate DATE NOT NULL, PRIMARY KEY (id))");
-         //   statement.execute("CREATE TABLE posts (id INT(11) not NULL, userid int(11) not NULL, text VARCHAR(50) not NULL, timestamp TIMESTAMP, PRIMARY KEY (id), FOREIGN KEY (userid) REFERENCES users(id))");
-         //   statement.execute("CREATE TABLE likes (postid INT(11) not null, userid int(11) not null, timestamp TIMESTAMP, FOREIGN KEY (postid) REFERENCES posts(id), FOREIGN KEY (userid) REFERENCES users(id))");
-         //   statement.execute("CREATE TABLE friendships (userid1 INT(11) not null, userid2 int(11) not null, timestamp TIMESTAMP, FOREIGN KEY (userid1) REFERENCES users(id), FOREIGN KEY (userid2) REFERENCES users(id))");
+            statement.execute("CREATE TABLE users (id INT(11) not NULL, name VARCHAR(30) not NULL, surname VARCHAR(30) not NULL, birthdate DATE NOT NULL, PRIMARY KEY (id))");
+            statement.execute("CREATE TABLE posts (id INT(11) not NULL, userid int(11) not NULL, text VARCHAR(50) not NULL, timestamp TIMESTAMP, PRIMARY KEY (id), FOREIGN KEY (userid) REFERENCES users(id))");
+            statement.execute("CREATE TABLE likes (postid INT(11) not null, userid int(11) not null, timestamp TIMESTAMP, FOREIGN KEY (postid) REFERENCES posts(id), FOREIGN KEY (userid) REFERENCES users(id))");
+            statement.execute("CREATE TABLE friendships (userid1 INT(11) not null, userid2 int(11) not null, timestamp TIMESTAMP, FOREIGN KEY (userid1) REFERENCES users(id), FOREIGN KEY (userid2) REFERENCES users(id))");
             System.out.println("Tables created");
 
             //Generate users (1000)
